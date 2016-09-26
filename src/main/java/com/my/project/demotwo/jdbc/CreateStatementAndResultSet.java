@@ -20,10 +20,27 @@ public class CreateStatementAndResultSet {
 		try {
 			Connection connection = DriverManager.getConnection(jdbcUrl, uName, pWord);
 			Statement statement = connection.createStatement();
-			ResultSet resultSet = statement.executeQuery("SELECT * FROM table_one");
+			/*ResultSet resultSet = statement.executeQuery("SELECT * FROM table_one");
 			while (resultSet.next()) {
 				System.out.println("Id:" + resultSet.getString(1) + " Name:" + resultSet.getString(2));
-			}
+			}*/
+			
+			// execute(), returns boolean value.
+			//System.out.println(statement.execute("SELECT * FROM table_one"));
+			
+			/* true returned by execute() doesn't mean there is result.
+			 * It is only used to differentiate an SQL Query vs Update.
+			 * For updates, it returns false
+			 */
+			System.out.println(statement.execute("SELECT * FROM table_one WHERE id=-1"));
+			System.out.println(statement.execute("INSERT INTO table_one VALUES ('3','C')"));
+			
+			/*if(statement.execute("INSERT INTO table_one VALUES ('2','B')")){
+				ResultSet resultSet = statement.getResultSet();
+				while(resultSet.next())
+					System.out.println(resultSet.getString(1));
+			}*/
+						
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
