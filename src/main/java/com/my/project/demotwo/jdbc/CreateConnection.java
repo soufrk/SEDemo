@@ -12,7 +12,6 @@ import java.sql.SQLException;
  *
  */
 public class CreateConnection {
-
 	public static void main(String[] args) {
 		String jdbcUrl = "jdbc:mysql://localhost:3306/test";
 		String uName = "root";
@@ -20,10 +19,8 @@ public class CreateConnection {
 		try{
 			Connection connection = DriverManager.getConnection(jdbcUrl, uName, pWord);
 			System.out.println(connection.isValid(100));
-		}catch(SQLException e){
+		} catch(SQLException e) {
 			e.printStackTrace();
 		}
-
 	}
-
 }
