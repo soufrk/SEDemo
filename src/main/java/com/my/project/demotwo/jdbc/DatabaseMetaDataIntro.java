@@ -18,8 +18,7 @@ public class DatabaseMetaDataIntro {
     }
 
     public static void main(String[] args) {
-	// String jdbcUrl = "jdbc:mysql://localhost:3306/test";
-	String jdbcUrl = "jdbc:mariadb://localhost:3306/portal_mis";
+	String jdbcUrl = "jdbc:mysql://localhost:3306/test";
 	String uName = "root";
 	String pWord = "tiger";
 	try {
