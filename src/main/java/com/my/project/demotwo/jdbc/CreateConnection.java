@@ -11,16 +11,18 @@ import java.sql.SQLException;
  * @author soufrk
  *
  */
-public class CreateConnection {
-	public static void main(String[] args) {
-		String jdbcUrl = "jdbc:mysql://localhost:3306/test";
-		String uName = "root";
-		String pWord = "mango";
-		try{
-			Connection connection = DriverManager.getConnection(jdbcUrl, uName, pWord);
-			System.out.println(connection.isValid(100));
-		} catch(SQLException e) {
-			e.printStackTrace();
-		}
+public class TestConnection {
+
+    public static void main(String[] args) {
+	String jdbcUrl = "jdbc:mariadb://localhost:3306/test";
+	String uName = "root";
+	String pWord = "tiger";
+	try {
+	    Connection connection = DriverManager.getConnection(jdbcUrl, uName, pWord);
+	    System.out.println(connection.isValid(100));
+	} catch (SQLException e) {
+	    e.printStackTrace();
 	}
+    }
+
 }
