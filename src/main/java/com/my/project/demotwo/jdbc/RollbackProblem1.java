@@ -1,4 +1,4 @@
-package jdbc;
+package com.my.project.demotwo.jdbc;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -17,7 +17,7 @@ public class RollbackProblem1 {
 	String jdbcUrl = "jdbc:mariadb://localhost:3306/test";
 	String uName = "root";
 	String pWord = "tiger";
-	String insertQuery = "INSERT INTO asset_category_bfl VALUES (?,?,?,?,?)";
+	String insertQuery = "INSERT INTO employees VALUES (?,?,?,?,?)";
 	try {
 	    Connection connection = DriverManager.getConnection(jdbcUrl, uName, pWord);
 	    connection.setAutoCommit(false);

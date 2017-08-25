@@ -11,7 +11,7 @@ import java.sql.SQLException;
  * @author soufrk
  *
  */
-public class TestConnection {
+public class CreateConnection {
 
     public static void main(String[] args) {
 	String jdbcUrl = "jdbc:mariadb://localhost:3306/test";
