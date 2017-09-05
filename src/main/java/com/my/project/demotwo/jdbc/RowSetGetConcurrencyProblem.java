@@ -12,7 +12,7 @@ import javax.sql.rowset.RowSetProvider;
  * @author soufrk
  *
  */
-public class RowSetPrimer {
+public class RowSetGetConcurrencyProblem {
 
     public static void main(String[] args) {
 	String jdbcUrl = "jdbc:mariadb://localhost:3306/innoviti_emi_staging";
