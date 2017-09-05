@@ -14,7 +14,8 @@ import javax.sql.rowset.RowSetProvider;
 import com.sun.rowset.JdbcRowSetImpl;
 
 /**
- * 3 ways to create JdbcRowset
+ * JdbcRowSet is the only connected RowSet implementation.
+ * Following are the 3 ways to create a JdbcRowset.
  * @author soufrk
  *
  */
