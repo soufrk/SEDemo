@@ -30,14 +30,14 @@ public class JdbcRowSetCreationWays {
 	String jdbcUrl = "jdbc:mariadb://localhost:3306/employees";
 	String uName = "root";
 	String pWord = "tiger";
-	String insertQuery = "SELECT * FROM employees WHERE status = 'Permanent'";
+	String query = "SELECT * FROM employees WHERE status = 'Permanent'";
 	Connection connection = null;
 	// 1st way, old. ------------------------------------------------------
 	try {
 	    connection = DriverManager.getConnection(jdbcUrl, uName, pWord);
 	    Statement statement = connection.createStatement(ResultSet.TYPE_SCROLL_SENSITIVE,
 		    ResultSet.CONCUR_UPDATABLE);
-	    ResultSet resultSet = statement.executeQuery(insertQuery);
+	    ResultSet resultSet = statement.executeQuery(query);
 	    JdbcRowSet rowSet = new JdbcRowSetImpl(resultSet);
 	} catch (SQLException e) {
 	    e.printStackTrace();
@@ -46,7 +46,7 @@ public class JdbcRowSetCreationWays {
 	try {
 	    connection = DriverManager.getConnection(jdbcUrl, uName, pWord);
 	    JdbcRowSet rowSet = new JdbcRowSetImpl(connection);
-	    rowSet.setCommand(insertQuery);
+	    rowSet.setCommand(query);
 	    rowSet.execute();
 	} catch (SQLException e) {
 	    e.printStackTrace();
@@ -59,7 +59,7 @@ public class JdbcRowSetCreationWays {
 	    rowSet.setUrl(jdbcUrl);
 	    rowSet.setUsername(uName);
 	    rowSet.setPassword(pWord);
-	    rowSet.setCommand(insertQuery);
+	    rowSet.setCommand(query);
 	    rowSet.execute();
 	} catch (SQLException e) {
 	    e.printStackTrace();
