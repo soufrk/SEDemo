@@ -1,4 +1,4 @@
-# SEDemo
+# demoTwo - The 2nd project
 
 JDBC and related topics of Java 7 for 1Z0-804.
 
