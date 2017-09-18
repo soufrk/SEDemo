@@ -16,6 +16,11 @@ import com.sun.rowset.JdbcRowSetImpl;
 /**
  * JdbcRowSet is the only connected RowSet implementation.
  * Following are the 3 ways to create a JdbcRowset.
+ *
+ * One of the main uses of a JdbcRowSet object is to make 
+ * a ResultSet object scrollable and updatable when it 
+ * does not otherwise have those capabilities.
+ *
  * @author soufrk
  *
  */
@@ -27,7 +32,7 @@ public class JdbcRowSetCreationWays {
 	String pWord = "tiger";
 	String insertQuery = "SELECT * FROM asset_category_staging WHERE risk_classification = 'A'";
 	Connection connection = null;
-	// 1st way, old.
+	// 1st way, old. ------------------------------------------------------
 	try {
 	    connection = DriverManager.getConnection(jdbcUrl, uName, pWord);
 	    Statement statement = connection.createStatement(ResultSet.TYPE_SCROLL_SENSITIVE,
@@ -37,7 +42,7 @@ public class JdbcRowSetCreationWays {
 	} catch (SQLException e) {
 	    e.printStackTrace();
 	}
-	// 2nd way, old.
+	// 2nd way, old. --------------------------------------------------------
 	try {
 	    connection = DriverManager.getConnection(jdbcUrl, uName, pWord);
 	    JdbcRowSet rowSet = new JdbcRowSetImpl(connection);
@@ -46,7 +51,7 @@ public class JdbcRowSetCreationWays {
 	} catch (SQLException e) {
 	    e.printStackTrace();
 	}
-	// 3rd and 
+	// 3rd and --------------------------------------------------------------
 	// RowSet 1.1, Java SE 7
 	try {
 	    RowSetFactory factory = RowSetProvider.newFactory();
