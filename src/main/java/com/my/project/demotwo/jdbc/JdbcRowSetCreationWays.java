@@ -27,10 +27,10 @@ import com.sun.rowset.JdbcRowSetImpl;
 public class JdbcRowSetCreationWays {
 
     public static void main(String[] args) {
-	String jdbcUrl = "jdbc:mariadb://localhost:3306/innoviti_emi_staging";
+	String jdbcUrl = "jdbc:mariadb://localhost:3306/employees";
 	String uName = "root";
 	String pWord = "tiger";
-	String insertQuery = "SELECT * FROM asset_category_staging WHERE risk_classification = 'A'";
+	String insertQuery = "SELECT * FROM employees WHERE status = 'Permanent'";
 	Connection connection = null;
 	// 1st way, old. ------------------------------------------------------
 	try {
