@@ -1,4 +1,4 @@
-package com.my.project.demotwo.jdbc;
+package com.my.project.demotwo.jdbc.rowsets.connected;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

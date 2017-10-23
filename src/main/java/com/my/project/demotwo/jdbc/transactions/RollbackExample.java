@@ -1,4 +1,4 @@
-package jdbc;
+package com.my.project.demotwo.jdbc.transactions;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

@@ -1,3 +1,5 @@
+package com.my.project.demotwo.jdbc.rowsets.connected;
+
 import java.sql.SQLException;
 
 import javax.sql.rowset.JdbcRowSet;
@@ -10,7 +12,7 @@ import javax.sql.rowset.RowSetProvider;
  * Observe behaviour with a query that returns,
  * only single row
  * two rows
- * @author souvik.goswami
+ * @author soufrk
  *
  */
 public class JdbcRowSetScrolling {

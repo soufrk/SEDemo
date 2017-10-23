@@ -1,4 +1,4 @@
-package jdbc;
+package com.my.project.demotwo.jdbc.rowsets;
 
 import java.sql.SQLException;
 
