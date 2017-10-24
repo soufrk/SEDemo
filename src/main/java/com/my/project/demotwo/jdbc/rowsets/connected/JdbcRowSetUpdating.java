@@ -36,7 +36,7 @@ public class JdbcRowSetUpdating {
     public static void update(JdbcRowSet rowSet) throws SQLException{
 	//rowSet.absolute(0); Optional
 	while(rowSet.next()){
-	    rowSet.updateDouble("Salary", "5000.00");
+	    rowSet.updateDouble("Salary", 5000.00D);
 	    rowSet.updateRow();
 	}
     }
