@@ -1,6 +1,6 @@
-# demoTwo - The 2nd project
+# ExamplesWithMariaDb - All examples are based on working with MariaDB as choice of database.
 
-JDBC and related topics of Java 7 for 1Z0-804.
+Major JDBC topics of Java 7 for 1Z0-804.
 
 * JDBC 4.0 Drive compliance
 * RowSet
