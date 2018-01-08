@@ -12,7 +12,7 @@ import java.sql.Statement;
  * @author soufrk
  *
  */
-public class ReturnToFirstRowOfResultSet {
+public class MoveToFirstRowOfResultSet {
 
     public static void main1(String[] args) {
 	String jdbcUrl = "jdbc:mariadb://localhost:3306/test";
