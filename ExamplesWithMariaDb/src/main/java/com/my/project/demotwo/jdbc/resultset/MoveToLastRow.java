@@ -1,4 +1,4 @@
-package com.my.project.demotwo.resultset;
+package com.my.project.demotwo.jdbc.resultset;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
