@@ -12,7 +12,7 @@ import java.sql.Statement;
  * @author soufrk
  *
  */
-public class MoveToFirstRowOfResultSet {
+public class MoveResultSetToStart {
 
     public static void main1(String[] args) {
 	String jdbcUrl = "jdbc:mariadb://localhost:3306/test";
@@ -23,7 +23,7 @@ public class MoveToFirstRowOfResultSet {
 	    Statement statement = connection.createStatement();
 	    ResultSet resultSet = statement.executeQuery("SELECT * FROM employees");
 	    System.out.println("Moved to next row successful:" + resultSet.next());
-	    // Now the question arises, how can get back to the first row again
+	    // Now the question arises, how can get back to the first row again.
 	    // ??
 	} catch (SQLException e) {
 	    e.printStackTrace();
