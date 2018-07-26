@@ -14,7 +14,7 @@ import java.util.Formatter;
  * @author soufrk
  *
  */
-public class MindTheUpdate {
+public class MindTheUpdateProblem {
     
     public static void main(String[] args) throws SQLException {
 	String jdbcUrl = "jdbc:mariadb://localhost:3306/test";
