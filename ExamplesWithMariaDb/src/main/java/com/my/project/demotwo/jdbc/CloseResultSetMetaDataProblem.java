@@ -14,7 +14,7 @@ import java.sql.Statement;
  * @author soufrk
  *
  */
-public class CloseResultSetMetaData {
+public class CloseResultSetMetaDataProblem {
 
     public static void main(String[] args) throws SQLException {
 	String jdbcUrl = "jdbc:mariadb://localhost:3306/test";
